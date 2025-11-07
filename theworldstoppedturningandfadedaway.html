@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Page</title>
+<style>
+  body { font-family: sans-serif; background: #f4f4f4; text-align: center; padding-top: 100px; }
+  #content { display: none; max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  #loginBox { max-width: 300px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  input { padding: 8px; width: 80%; margin-bottom: 10px; }
+  button { padding: 8px 16px; }
+</style>
+</head>
+<body>
+
+<div id="loginBox">
+  <h2>Enter Password</h2>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="checkPassword()">Submit</button>
+  <p id="message" style="color:red;"></p>
+</div>
+
+<div id="content">
+  <h1>What should we do? options: t a w r a e t k o b s o r </h1>
+  </div>
+
+<script>
+  // Change this to whatever password you want
+  const correctPassword = "lovestoppedwithering";
+
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    if (input === correctPassword) {
+      document.getElementById("content").style.display = "block";
+      document.getElementById("loginBox").style.display = "none";
+    } else {
+      document.getElementById("message").textContent = "Incorrect password. Try again.";
+    }
+  }
+</script>
+
+</body>
+</html>
