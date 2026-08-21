@@ -107,6 +107,27 @@
     border-color: var(--accent);
     background: #fff8f2;
   }
+  label.feature-option {
+    align-items: flex-start;
+  }
+  label.feature-option input {
+    margin-top: 2px;
+  }
+  .option-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .option-title {
+    display: block;
+  }
+  .feature-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 3px;
+    line-height: 1.35;
+  }
   input[type="radio"], input[type="checkbox"] {
     width: 17px;
     height: 17px;
@@ -179,43 +200,52 @@
       <p class="legend-sub">select all that apply</p>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="torque_control">
-        <span>Adjustable torque control<span class="feature-hint">Lets you set how much force is applied, so you don't overtighten or strip a screw</span></span>
+        <span class="option-text">
+          <span class="option-title">Adjustable torque control</span>
+          <span class="feature-hint">Lets you set how much force is applied, so you don't overtighten or strip a screw</span>
+        </span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="battery_life">
-        <span>Long battery life</span>
+        <span class="option-text"><span class="option-title">Long battery life</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="fast_charging">
-        <span>Fast charging</span>
+        <span class="option-text"><span class="option-title">Fast charging</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="led_light">
-        <span>Built-in LED work light</span>
+        <span class="option-text"><span class="option-title">Built-in LED work light</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="compact">
-        <span>Compact / lightweight design</span>
+        <span class="option-text"><span class="option-title">Compact / lightweight design</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="reversible">
-        <span>Reversible (forward/reverse) rotation<span class="feature-hint">Switches direction so it can remove screws, not just drive them in</span></span>
+        <span class="option-text"><span class="option-title">Reversible (forward/reverse) rotation</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="bit_storage">
-        <span>Onboard bit storage<span class="feature-hint">A built-in compartment or magnetic strip that holds extra bits on the tool itself</span></span>
+        <span class="option-text">
+          <span class="option-title">Onboard bit storage</span>
+          <span class="feature-hint">A built-in compartment or magnetic strip that holds extra bits on the tool itself</span>
+        </span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="ergonomic_grip">
-        <span>Ergonomic / non-slip grip</span>
+        <span class="option-text"><span class="option-title">Ergonomic / non-slip grip</span></span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="brushless_motor">
-        <span>Brushless motor<span class="feature-hint">No physical contacts wearing down inside — runs cooler, lasts longer, and is more energy-efficient</span></span>
+        <span class="option-text">
+          <span class="option-title">Brushless motor</span>
+          <span class="feature-hint">A more durable, efficient motor type — lasts longer and gives better battery life than standard motors</span>
+        </span>
       </label>
       <label class="option feature-option">
         <input type="checkbox" name="features" value="carrying_case">
-        <span>Carrying case included</span>
+        <span class="option-text"><span class="option-title">Carrying case included</span></span>
       </label>
     </fieldset>
 
