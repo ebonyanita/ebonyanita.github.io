@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Screwdriver Travel Agency ✈️</title>
+<title>Torque & Co. — Electric Screwdriver Questionnaire</title>
 <style>
   :root {
     --accent: #e8590c;
@@ -174,15 +174,23 @@
     text-align: center;
     padding: 44px 24px;
   }
-  #confirmation h2 { margin-bottom: 8px; }
-  #confirmation p { color: var(--muted); }
+  #confirmation .thank-you {
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+  #confirmation .processing-time {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0;
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="logo-line">Torque &amp; Co.</div>
-    <h1>Your dream electric screwdriver is just a few clicks away.</h1>
+    <h1 id="headline">Your dream electric screwdriver is just a few clicks away.</h1>
   </header>
 
   <form id="questionnaire" class="card">
@@ -283,8 +291,8 @@
   </form>
 
   <div id="confirmation" class="card">
-    <h2>Thank you for trusting us to make your vision come true.</h2>
-    <p>Your answers help us find the perfect screwdriver match for you.</p>
+    <p class="thank-you">Thank you for trusting us to make your vision come true.</p>
+    <p class="processing-time">Processing time: 1–1000 days.</p>
   </div>
 </div>
 
@@ -322,6 +330,7 @@
     })
       .then(function () {
         form.style.display = 'none';
+        document.getElementById('headline').style.display = 'none';
         confirmation.style.display = 'block';
       })
       .catch(function (err) {
