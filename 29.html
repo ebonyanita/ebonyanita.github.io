@@ -205,6 +205,38 @@
   .choice-btn.secondary:hover { border-color: var(--accent); }
   .choice-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
+  .choice-btn-neither {
+    display: block;
+    margin: 12px auto 0;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .choice-btn-neither:hover { color: var(--accent); }
+
+  #neither-box {
+    display: none;
+    max-width: 420px;
+    margin: 14px auto 0;
+  }
+  #neither-box textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+    margin-bottom: 10px;
+  }
+  .neither-submit { width: 100%; }
+
   #choice-confirmation {
     display: none;
     text-align: center;
@@ -363,6 +395,11 @@
     <div class="choice-buttons">
       <button class="choice-btn" data-choice="IXO 7">I choose IXO 7</button>
       <button class="choice-btn secondary" data-choice="PushDrive">I choose PushDrive</button>
+    </div>
+    <button class="choice-btn-neither" id="neither-btn">Neither</button>
+    <div id="neither-box">
+      <textarea id="neither-text" placeholder="What would you rather have?"></textarea>
+      <button class="choice-btn neither-submit" id="neither-submit">Submit</button>
     </div>
   </div>
 
