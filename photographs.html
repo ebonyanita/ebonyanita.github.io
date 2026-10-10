@@ -20,11 +20,13 @@
     .photo-col img {
       display: block;
       width: 100%;
+      height: auto;
       margin-bottom: 0.75rem;
       border-radius: 8px;
     }
     @media (max-width: 500px) {
-      .photo-grid { flex-direction: column; }
+      .photo-grid { flex-direction: column; gap: 0; }
+      .photo-col { display: contents; }
     }
   </style>
 </head>
@@ -51,23 +53,23 @@
 
       <div class="photo-grid">
         <div class="photo-col">
-          <img src="photos/photo1.jpg" alt="Bergen June 2025">
-          <img src="photos/photo4.jpg" alt="Brno September 2025">
-          <img src="photos/photo5.jpg" alt="Brno September 2025">
-          <img src="photos/photo9.JPG" alt="Portugal July 2026">
-          <img src="photos/photo6.JPG" alt="Portugal July 2026">
-          <img src="photos/photo12.JPG" alt="Barcelona September 2026">
-          <img src="photos/photo13.JPG" alt="Barcelona September 2026">
+          <img src="photos/photo1.jpg" alt="Bergen June 2025" style="order:1">
+          <img src="photos/photo4.jpg" alt="Brno September 2025" style="order:3">
+          <img src="photos/photo5.jpg" alt="Brno September 2025" style="order:5">
+          <img src="photos/photo9.JPG" alt="Portugal July 2026" style="order:7">
+          <img src="photos/photo6.JPG" alt="Portugal July 2026" style="order:9">
+          <img src="photos/photo12.JPG" alt="Barcelona September 2026" style="order:11">
+          <img src="photos/photo13.JPG" alt="Barcelona September 2026" style="order:13">
         </div>
         <div class="photo-col">
-          <img src="photos/photo2.jpg" alt="Marseille July 2025">
-          <img src="photos/photo3.jpg" alt="Brno September 2025">
-          <img src="photos/photo10.JPG" alt="Portugal July 2026">
-          <img src="photos/photo8.JPG" alt="Portugal July 2026">
-          <img src="photos/photo7.JPG" alt="Portugal July 2026">
-          <img src="photos/photo11.JPG" alt="Portugal July 2026">
-          <img src="photos/photo15.JPG" alt="Barcelona September 2026">
-          <img src="photos/photo14.JPG" alt="Barcelona September 2026">
+          <img src="photos/photo2.jpg" alt="Marseille July 2025" style="order:2">
+          <img src="photos/photo3.jpg" alt="Brno September 2025" style="order:4">
+          <img src="photos/photo10.JPG" alt="Portugal July 2026" style="order:6">
+          <img src="photos/photo8.JPG" alt="Portugal July 2026" style="order:8">
+          <img src="photos/photo7.JPG" alt="Portugal July 2026" style="order:10">
+          <img src="photos/photo11.JPG" alt="Portugal July 2026" style="order:12">
+          <img src="photos/photo15.JPG" alt="Barcelona September 2026" style="order:14">
+          <img src="photos/photo14.JPG" alt="Barcelona September 2026" style="order:15">
         </div>
       </div>
     </section>
