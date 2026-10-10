@@ -6,6 +6,23 @@
   <title>Photography — Ebony Anita Granada</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="description" content="Photography by Ebony Anita Granada">
+  <style>
+    .photo-grid {
+      column-count: 2;
+      column-gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .photo-grid img {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.75rem;
+      border-radius: 8px;
+      break-inside: avoid;
+    }
+    @media (max-width: 500px) {
+      .photo-grid { column-count: 1; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -28,17 +45,16 @@
       <h2>Photography</h2>
       <p>From the early hours before the conference day starts, lunch breaks, or that window of time between the last presentation and the evening social event.</p>
 
-      <!-- Add your photos here -->
-      <div style="margin-top:1rem;">
-        <img src="photos/photo1.jpg" alt="Bergen June 2025" style="width:100%; border-radius:8px;">
-        <img src="photos/photo2.jpg" alt="Marseille July 2025" style="width:100%; border-radius:8px;">
-        <img src="photos/photo3.jpg" alt="Brno September 2025" style="width:100%; border-radius:8px;">
-        <img src="photos/photo4.jpg" alt="Brno September 2025" style="width:100%; border-radius:8px;">
-        <img src="photos/photo5.jpg" alt="Brno September 2025" style="width:100%; border-radius:8px;">
-        <img src="photos/photo6.JPG" alt="Barcelona September 2026" style="width:100%; border-radius:8px;">
-        <img src="photos/photo7.JPG" alt="Barcelona September 2026" style="width:100%; border-radius:8px;">
-        <img src="photos/photo8.JPG" alt="Barcelona September 2026" style="width:100%; border-radius:8px;">
-        <img src="photos/photo9.JPG" alt="Barcelona September 2026" style="width:100%; border-radius:8px;">
+      <div class="photo-grid">
+        <img src="photos/photo1.jpg" alt="Bergen June 2025">
+        <img src="photos/photo2.jpg" alt="Marseille July 2025">
+        <img src="photos/photo3.jpg" alt="Brno September 2025">
+        <img src="photos/photo4.jpg" alt="Brno September 2025">
+        <img src="photos/photo5.jpg" alt="Brno September 2025">
+        <img src="photos/photo6.JPG" alt="Barcelona September 2026">
+        <img src="photos/photo7.JPG" alt="Barcelona September 2026">
+        <img src="photos/photo8.JPG" alt="Barcelona September 2026">
+        <img src="photos/photo9.JPG" alt="Barcelona September 2026">
       </div>
     </section>
 
